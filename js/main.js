@@ -136,11 +136,11 @@
 
 
 $(document).ready(function() {
-	
+
 	/*----------  do at first - start  ----------*/
 		getScrollBarWidth();
 		ymaps.ready(build_maps);
-	/*----------  do at first - end  ----------*/	
+	/*----------  do at first - end  ----------*/
 
 	/*----------  init plugins - start  ----------*/
 		$('#user-phone').mask('+7(000)000-00-00');
@@ -176,7 +176,7 @@ $(document).ready(function() {
 
 			// if (block.hasClass('minimized')) {
 			// 	$('.product-list > ul > li').removeClass('active');
-			// 	showBlock(button, block);			
+			// 	showBlock(button, block);
 			// } else {
 			// 	if ($('[name="fast-buy__item"]:checked').length > 0) {
 					$('#modal-buy-form').modal('show');
@@ -233,22 +233,44 @@ $(document).ready(function() {
 					.find('.product-item__image img')
 					.addClass('hidden')
 					.eq($this.closest('li').index())
-					.removeClass('hidden')
+					.removeClass('hidden');
+					if($('.color-variety').length > 0) {
+          var current_item = $('.color-variety').find('a[data-color-id="' + $this.attr('data-color-id') + '"]')
+          if (!current_item.closest('li').hasClass('active')) {
+          current_item.trigger('click');
+          }
+         }
 			}
 			if($this.closest('.color-variety__item').length > 0) {
 				$this.closest('.product-item')
 					.find('.product-item__image img')
 					.addClass('hidden')
 					.eq($this.closest('li').index())
-					.removeClass('hidden')
+					.removeClass('hidden');
+					if($('.product-presentation.single-mode').length > 0) {
+          var current_item = $('.product-presentation.single-mode .product-item__dots').find('a[data-color-id="' + $this.attr('data-color-id') + '"]')
+          if(!current_item.closest('li').hasClass('active')) {
+          current_item.trigger('click');
+           }
+        }
 				$('.full-width-block').each(function(){
 					var $th = $(this),
 						match = '',
 						url = '',
 						replace_str = '',
 						file_type = '';
-					if($th.hasClass('type-3') || $th.hasClass('type-4') || $th.hasClass('type-6') || $th.hasClass('type-7') || $th.hasClass('type-8')) {
-						url = $th.find('.full-width-block__inner').css('background-image').match(/(\".+\")/i)[0].replace('"', '').replace('"', '')
+
+						// detect browser
+           var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+           var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+           if ((is_chrome)&&(is_safari)) {is_safari=false;}
+
+					 if($th.hasClass('type-3') || $th.hasClass('type-4') || $th.hasClass('type-6') || $th.hasClass('type-7') || $th.hasClass('type-8')) {
+					 if (is_safari) {
+						      url = $th.find('.full-width-block__inner').css('background-image').match(/(\(.+\))/i)[0].replace('(', '').replace(')', '');
+					 } else {
+					   	    url = $th.find('.full-width-block__inner').css('background-image').match(/(\".+\")/i)[0].replace('"', '').replace('"', '');
+					 }
 						file_type = url.match(/(\.\w+$)/i)[0];
 						match = url.match(/(__.+$)/i)
 						if(match == null) {
@@ -328,7 +350,7 @@ $(document).ready(function() {
 
 	$(window).on('load', function(){
 		var windowInnerWidth = window.innerWidth;
-		
+
 		if (windowInnerWidth < bp_XX) {windowXX();};
 		if (windowInnerWidth >= bp_XX && windowInnerWidth < bp_XS) {windowXS();};
 		if (windowInnerWidth >= bp_XS && windowInnerWidth < bp_SM) {windowSM();};
@@ -516,7 +538,7 @@ $(document).ready(function() {
 					},
 					1276: {
 
-					}					
+					}
 				}
 			});
 			production_slider = $('.production-slider').data('owlCarousel');
@@ -531,7 +553,7 @@ $(document).ready(function() {
 				autoHeight: true,
 				animateOut: 'zoomOut',
 				animateIn: 'fadeInDown',
-				onTranslated: function(){				
+				onTranslated: function(){
 					$('.history-pagination-1 li')
 						.removeClass('active')
 						.eq($('#history-slider').find('.owl-item.active').index())
@@ -553,12 +575,12 @@ $(document).ready(function() {
 				animateOut: 'zoomOut',
 				animateIn: 'fadeInDown',
 				onInitialized: update_history_slider_2_gallery_item_height(),
-				onTranslated: function(){				
+				onTranslated: function(){
 					$('.history-pagination-2 li')
 						.removeClass('active')
 						.eq($('#history-slider-2').find('.owl-item.active').index())
 						.addClass('active');
-					update_history_slider_2_gallery_item_height();					
+					update_history_slider_2_gallery_item_height();
 				},
 				nav: false
 			});
@@ -644,7 +666,7 @@ $(document).ready(function() {
 			main_map.setBounds(main_map_collection.getBounds());
 			main_map.geoObjects.add(main_map_collection);
 			update__perfectScroll();
-		
+
 			$(document).on('resize', function(){
 				main_map.container.fitToViewport();
 			});
@@ -737,19 +759,19 @@ $(document).ready(function() {
 	};
 	parse_address = function(address){
 		if (address != '') {
-			$.ajax({ 
-				url: 'https://geocode-maps.yandex.ru/1.x/?format=json&geocode=' + address, 
-				type: 'GET', 
-				async : false, 
-				success: function(data){ 
+			$.ajax({
+				url: 'https://geocode-maps.yandex.ru/1.x/?format=json&geocode=' + address,
+				type: 'GET',
+				async : false,
+				success: function(data){
 					var coords = [
-							parseFloat(data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(" ")[1]), 
+							parseFloat(data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(" ")[1]),
 							parseFloat(data.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(" ")[0])
 						];
 					get_closest_placemark(coords);
-				}, 
-				error: function(){ 
-					alert('no results'); 
+				},
+				error: function(){
+					alert('no results');
 				}
 			});
 		};
