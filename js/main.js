@@ -265,7 +265,7 @@ $(document).ready(function() {
            var is_safari = navigator.userAgent.indexOf("Safari") > -1;
            if ((is_chrome)&&(is_safari)) {is_safari=false;}
 
-					 if($th.hasClass('type-3') || $th.hasClass('type-4') || $th.hasClass('type-6') || $th.hasClass('type-7') || $th.hasClass('type-8')) {
+           if($th.hasClass('will-change-image')) {
 					 if (is_safari) {
 						      url = $th.find('.full-width-block__inner').css('background-image').match(/(\(.+\))/i)[0].replace('(', '').replace(')', '');
 					 } else {
@@ -285,7 +285,26 @@ $(document).ready(function() {
 							})
 						}
 					}
-				})
+				});
+				$('.standart-block').each(function(){
+                var $th = $(this),
+                        match = '',
+                        url = '',
+                        replace_str = '',
+                        file_type = '';
+               if($th.hasClass('will-change-image')) {
+                        img = $th.find('.standart-block__image img')
+                        url = img.attr('src');
+                        file_type = url.match(/(\.\w+$)/i)[0];
+                        match = url.match(/(__.+$)/i);
+                        replace_str = '__' + $this.attr('data-color-id') + file_type;
+                        if(match == null) {
+                                 img.attr('src', url.replace(file_type, replace_str));
+               } else {
+                        img.attr('src', url.replace(match[0], replace_str));
+               }
+           }
+       });
 			}
 			e.preventDefault();
 		});
