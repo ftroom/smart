@@ -1,0 +1,147 @@
+/*===================================
+=            video-block            =
+===================================*/
+
+	.video-block {
+		position: relative;
+		min-height: 700px;
+		// margin-top: -10px;
+	}
+	.video-block__bg {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+		overflow: hidden;
+		z-index: 1;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		top: 0;
+
+		iframe {
+			position: absolute;
+			display: block;
+			height: 100%;
+			width: 100%;
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 0;
+		}
+		video#bgvid {
+			.transform(translateX(-50%) translateY(-50%));
+			position: absolute;
+			min-height: 100%;
+			min-width: 100%;
+			// z-index: -100;
+			height: auto;
+			width: auto;
+			left: 50%;
+			top: 50%;
+		}
+
+		&:after {
+			background-color: rgba(0,0,0,0.7);
+			position: absolute;
+			display: block;
+			content: '';
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 0;
+		}
+	}
+	.video-block__container {
+		position: relative;
+		z-index: 2;
+	}
+	.video-block__title {
+		padding-right: 460px;
+		padding-top: 246px;
+		padding-left: 8px;
+		color: #fff;
+
+		h4 {
+			padding-bottom: 11px;
+			line-height: 40px;
+			font-size: 28px;
+		}
+		span {
+			line-height: 27px;
+			font-size: 16px;
+		}
+	}
+	@media (max-width: @screen-md-max) {
+		.video-block {
+			margin-top: 0;
+		}
+		.video-block__bg {
+			iframe {}
+			&:after {}
+		}
+		.video-block__container {}
+		.video-block__title {
+			padding-right: 350px;
+			padding-top: 185px;
+			padding-left: 0;
+
+			h4 {}
+			span {}
+		}
+	}
+	@media (max-width: @screen-sm-max) {
+		.video-block {}
+		.video-block__bg {
+			iframe {}
+			&:after {}
+		}
+		.video-block__container {}
+		.video-block__title {
+			padding-right: 180px;
+			
+			h4 {}
+			span {}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		.video-block {
+			min-height: 0;
+		}
+		.video-block__bg {
+			iframe {}
+			&:after {}
+			video#bgvid {
+				display: none;
+			}
+		}
+		.video-block__container {}
+		.video-block__title {
+			padding-bottom: 50px;
+			padding-top: 30px;
+			padding-right: 0;
+
+			h4 {
+				line-height: normal;
+				font-size: 24px;
+			}
+			span {
+				line-height: normal;
+				font-size: 14px;
+			}
+		}
+	}
+	@media (max-width: @screen-xx-max) {
+		.video-block {}
+		.video-block__bg {
+			iframe {}
+			&:after {}
+		}
+		.video-block__container {}
+		.video-block__title {
+			h4 {}
+			span {}
+		}
+	}
+
+/*=====  End of video-block  ======*/

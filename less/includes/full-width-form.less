@@ -1,0 +1,145 @@
+/*=======================================
+=            full-width-form            =
+=======================================*/
+
+	.full-width-form {
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		min-height: 500px;
+
+		form {
+			padding: 50px 175px 30px;
+		}
+		.form-group {}
+		input.form-control {
+			background-color: #fcfcfc;
+			border: 1px solid #adb0be;
+			border-radius: 100px;
+			padding-right: 25px;	
+			padding-left: 25px;
+			line-height: 19px;
+			font-size: 14px;
+			color: #353a42;
+			height: 40px;
+		}
+	}
+	.full-width-form__container {}
+	.full-width-form__title {
+		padding-top: 107px;
+		text-align: center;
+		color: #fff;
+
+		h4 {
+			line-height: 55px;
+			font-size: 40px;
+		}
+		span {
+			margin-right: auto;
+			margin-left: auto;
+			line-height: 30px;
+			padding-top: 10px;
+			max-width: 675px;
+			font-size: 18px;
+			display: block;
+		}
+	}
+	.full-width-form__buttons {
+		[type="submit"] {
+			padding: 8px 0px 8px;
+			width: 185px;
+		}
+	}
+	@media (max-width: @screen-md-max) {
+		.full-width-form {
+			form {
+				padding-right: 20px;
+				padding-left: 20px;
+			}
+			.form-group {}
+			input.form-control {}
+		}
+		.full-width-form__container {}
+		.full-width-form__title {
+			h4 {}
+			span {}
+		}
+		.full-width-form__buttons {
+			[type="submit"] {}
+		}
+	}
+	@media (max-width: @screen-sm-max) {
+		.full-width-form {
+			min-height: 480px;
+
+			form {
+				padding-right: 0;
+				padding-left: 0;
+			}
+			.form-group {}
+			input.form-control {}
+		}
+		.full-width-form__container {}
+		.full-width-form__title {
+			h4 {}
+			span {}
+		}
+		.full-width-form__buttons {
+			[type="submit"] {}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		.full-width-form {
+			form {
+				padding-right: 30px;
+				padding-left: 30px;
+			}
+			.form-group {}
+			input.form-control {}
+		}
+		.full-width-form__container {}
+		.full-width-form__title {
+			padding-top: 60px;
+
+			h4 {
+				line-height: normal;
+				font-size: 36px;
+			}
+			span {
+				font-size: 16px;
+			}
+		}
+		.full-width-form__buttons {
+			text-align: center;
+
+			[type="submit"] {}
+		}
+	}
+	@media (max-width: @screen-xx-max) {
+		.full-width-form {
+			min-height: 0;
+
+			form {
+				padding-top: 30px;
+			}
+			.form-group {}
+			input.form-control {}
+		}
+		.full-width-form__container {}
+		.full-width-form__title {
+			padding-top: 20px;
+
+			h4 {
+				font-size: 26px;
+			}
+			span {
+				line-height: normal;
+				font-size: 14px;
+			}
+		}
+		.full-width-form__buttons {
+			[type="submit"] {}
+		}
+	}
+
+/*=====  End of full-width-form  ======*/

@@ -1,0 +1,178 @@
+/*====================================
+=            chose-avatar            =
+====================================*/
+
+	.chose-avatar {
+		overflow: hidden;
+	}
+	.chose-avatar__container {}
+	.chose-avatar__title {
+		text-align: center;
+		padding-top: 60px;
+		
+		h4 {
+			line-height: 55px;
+			font-size: 40px;
+		}
+		span {
+			margin-right: auto;
+			margin-left: auto;
+			padding-top: 10px;
+			line-height: 24px;
+			max-width: 820px;
+			font-size: 18px;
+			display: block;
+		}
+	}
+	.chose-avatar__list {
+		text-align: center;
+		padding-top: 66px;
+		margin: 0px -55px;
+
+		li {
+			vertical-align: bottom;
+			display: inline-block;
+			width: 49%;
+
+			&.avatar-pro {
+				img {
+					margin-bottom: -68px;
+				}
+			}
+			&.avatar-bigfoot {
+				img {
+					margin-bottom: -50px;
+					width: 512px;
+				}
+			}
+			img {
+				max-width: 512px;
+			}
+			a {
+				display: inline-block;
+				padding: 8px 25px;
+				margin-top: 25px;
+
+				&:hover {}
+				&:focus {}
+				&:active {}
+			}
+		}
+	}
+	@media (max-width: @screen-md-max) {
+		.chose-avatar {}
+		.chose-avatar__container {}
+		.chose-avatar__title {
+			h4 {}
+			span {}
+		}
+		.chose-avatar__list {
+			margin: 0;
+
+			li {
+				&.avatar-pro {
+					img {}
+				}
+				&.avatar-bigfoot {
+					img {}
+				}
+				img {
+					max-width: 100%;
+				}
+				a {
+					&:hover {}
+					&:focus {}
+					&:active {}
+				}
+			}
+		}
+	}
+	@media (max-width: @screen-sm-max) {
+		.chose-avatar {}
+		.chose-avatar__container {}
+		.chose-avatar__title {
+			h4 {
+				line-height: normal;
+				font-size: 36px;
+			}
+			span {}
+		}
+		.chose-avatar__list {
+			li {
+				&.avatar-pro {
+					img {}
+				}
+				&.avatar-bigfoot {
+					img {
+						margin-bottom: -56px;
+					}
+				}
+				img {}
+				a {
+					&:hover {}
+					&:focus {}
+					&:active {}
+				}
+			}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		.chose-avatar {}
+		.chose-avatar__container {}
+		.chose-avatar__title {
+			h4 {
+				font-size: 24px;
+			}
+			span {
+				font-size: 16px;
+			}
+		}
+		.chose-avatar__list {
+			li {
+				display: block;
+				width: auto;
+
+				&.avatar-pro {
+					img {}
+				}
+				&.avatar-bigfoot {
+					img {}
+				}
+				img {}
+				a {
+					&:hover {}
+					&:focus {}
+					&:active {}
+				}
+			}
+		}
+	}
+	@media (max-width: @screen-xx-max) {
+		.chose-avatar {}
+		.chose-avatar__container {}
+		.chose-avatar__title {
+			h4 {}
+			span {
+				line-height: normal;
+				font-size: 14px;
+			}
+		}
+		.chose-avatar__list {
+			li {
+				&.avatar-pro {
+					img {}
+				}
+				&.avatar-bigfoot {
+					img {}
+				}
+				img {}
+				a {
+					&:hover {}
+					&:focus {}
+					&:active {}
+				}
+			}
+		}
+	}
+
+/*=====  End of chose-avatar  ======*/

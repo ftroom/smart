@@ -1,0 +1,499 @@
+/*======================================
+=            history-block            =
+======================================*/
+
+	.history-block-title {
+		background-color: #fafafc;
+		padding-bottom: 88px;
+		text-align: center;
+		padding-top: 50px;
+		
+		h3 {
+			line-height: 55px;
+			font-weight: 400;
+			font-size: 40px;
+			color: #000;
+		}
+		span {
+			margin-right: auto;
+			margin-left: auto;
+			padding-top: 11px;
+			line-height: 24px;
+			max-width: 660px;
+			font-size: 18px;
+			display: block;
+		}
+	}
+	.history-block {
+		background-color: #000;
+		position: relative;
+		color: #fff;
+
+		&:before {
+			background-image: url(../img/template/history-decoration.png);
+			background-position: center bottom;
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			position: absolute;
+			display: block;
+			height: 27px;
+			bottom: 100%;
+			content: '';
+			right: 0;
+			left: 0;
+		}
+	}
+	.history-block__inner {
+		overflow: hidden;
+	}
+	.history-block__container {
+		position: relative;
+
+		&:before {
+			background-image: url(../img/template/man.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			position: absolute;
+			display: block;
+			height: 595px;
+			width: 567px;
+			left: -140px;
+			content: '';
+			bottom: 0;
+		}
+	}
+	.history-slider {}
+	.history-slider__container {
+		background-image: url(../img/content/segway_logo.png);
+		background-position: center 44px;
+		background-repeat: no-repeat;
+		padding-bottom: 1px;
+		padding-right: 140px;
+		padding-left: 293px;
+		padding-top: 160px;
+	}
+	.history-slider__item {
+		min-height: 485px;
+	}
+	.history-slider__item-title {
+		line-height: 40px;
+		max-width: 655px;
+		font-size: 28px;
+	}
+	.history-slider__item-text {
+		padding-top: 31px;
+		line-height: 27px;
+		font-size: 16px;
+
+		ul {}
+		li {
+			margin-bottom: 27px;
+			padding-left: 40px;
+			position: relative;
+
+			&:before {
+				background-color: #fff;
+				position: absolute;
+				display: block;
+				height: 1px;
+				width: 25px;
+				content: '';
+				top: 13px;
+				left: 0;
+			}
+		}
+	}
+	.history-pagination {
+		position: absolute;
+		right: 40px;
+		top: 70px;
+
+		ul {}
+		li {
+			.transition(all 0.3s ease);
+			padding-bottom: 21px;
+			position: relative;
+			padding-top: 21px;
+			margin-top: 53px;
+			cursor: pointer;
+			display: block;
+			width: 68px;
+			
+			&:first-child {
+				margin-top: 0;
+
+				&:before {
+					display: none;
+				}
+			}
+			&:before {
+				background-color: #fff;
+				position: absolute;
+				display: block;
+				height: 50px;
+				content: '';
+				width: 1px;
+				top: -35px;
+				left: 50%;
+			}
+			&.active {
+				padding-bottom: 21px;
+				padding-top: 21px;
+
+				&:before {
+					top: -65px;
+				}
+				.history-pagination-item-inner {
+					color: #fff;
+
+					&:after,
+					&:before {
+						opacity: 1;
+						margin: 0;
+					}
+					span {
+						&:before {
+							background-color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+	.history-pagination-item-inner {
+		.transition(color 0.3s ease);
+		color: #ff3335;
+		
+		&:after,
+		&:before {
+			.transition(all 0.3s ease);
+			border: 1px solid #fff;
+			position: absolute;
+			display: block;
+			content: '';
+			opacity: 0;
+			z-index: 1;
+		} 
+		&:after {
+			margin-left: -20px;
+			margin-top: -20px;
+			bottom: 2px;
+			right: -1px;
+			left: 2px;
+			top: -1px;
+		}
+		&:before {
+			margin-bottom: -20px;
+			margin-right: -20px;
+			bottom: -1px;
+			right: 2px;
+			left: -1px;
+			top: 2px;
+		}
+	}
+	.history-pagination-item-text {
+		text-align: center;
+		line-height: 14px;
+		font-weight: 700;
+		font-size: 14px;
+		margin: auto;
+		z-index: 2;
+
+		span {
+			padding-bottom: 8px;
+			position: relative;
+			padding-top: 8px;
+			display: block;
+
+			&:first-child {
+				&:before {
+					display: none;
+				}
+			}
+			&:before {
+				background-color: #ff3335;
+				border-right-width: 1px;
+				margin: 0 auto auto;
+				position: absolute;
+				display: block;
+				content: '';
+				height: 1px;
+				width: 15px;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+	@media (max-width: @screen-md-max) {
+		.history-block-title {
+			h3 {}
+			span {}
+		}
+		.history-block {
+			&:before {}
+		}
+		.history-block__container {
+			&:before {
+				left: -260px;
+			}
+		}
+		.history-slider {}
+		.history-slider__container {
+			padding-right: 100px;
+			padding-left: 100px;
+		}
+		.history-slider__item {}
+		.history-slider__item-title {}
+		.history-slider__item-text {
+			ul {}
+			li {
+				&:before {}
+			}
+		}
+		.history-pagination {
+			right: 20px;
+
+			ul {}
+			li {
+				&:first-child {
+					&:before {}
+				}
+				&:before {}
+				&.active {
+					&:before {}
+					.history-pagination-item-inner {
+						&:after,
+						&:before {}
+						span {
+							&:before {}
+						}
+					}
+				}
+			}
+		}
+		.history-pagination-item-inner {
+			&:after,
+			&:before {} 
+			&:after {}
+			&:before {}
+		}
+		.history-pagination-item-text {
+			span {
+				&:first-child {
+					&:before {}
+				}
+				&:before {}
+			}
+		}
+	}
+	@media (max-width: @screen-sm-max) {
+		.history-block-title {
+			h3 {}
+			span {}
+		}
+		.history-block {
+			&:before {}
+		}
+		.history-block__container {
+			&:before {}
+		}
+		.history-slider {}
+		.history-slider__container {}
+		.history-slider__item {}
+		.history-slider__item-title {
+			line-height: normal;
+			font-size: 22px;
+		}
+		.history-slider__item-text {
+			ul {}
+			li {
+				&:before {}
+			}
+		}
+		.history-pagination {
+			ul {}
+			li {
+				&:first-child {
+					&:before {}
+				}
+				&:before {}
+				&.active {
+					&:before {}
+					.history-pagination-item-inner {
+						&:after,
+						&:before {}
+						span {
+							&:before {}
+						}
+					}
+				}
+			}
+		}
+		.history-pagination-item-inner {
+			&:after,
+			&:before {} 
+			&:after {}
+			&:before {}
+		}
+		.history-pagination-item-text {
+			span {
+				&:first-child {
+					&:before {}
+				}
+				&:before {}
+			}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		.history-block-title {
+			padding-bottom: 50px;
+			padding-top: 15px;
+
+			h3 {
+				line-height: normal;
+				font-size: 28px;
+			}
+			span {
+				font-size: 14px;
+			}
+		}
+		.history-block {
+			&:before {}
+		}
+		.history-block__container {
+			&:before {
+				max-width: 100%;
+				opacity: 0.3;
+				left: 0;
+			}
+		}
+		.history-slider {}
+		.history-slider__container {
+			padding-left: 0;
+		}
+		.history-slider__item {}
+		.history-slider__item-title {
+			font-size: 18px;
+		}
+		.history-slider__item-text {
+			text-align: justify;
+			line-height: normal;
+			padding-top: 20px;
+			font-size: 14px;
+
+			ul {}
+			li {
+				margin-bottom: 20px;
+
+				&:before {}
+			}
+		}
+		.history-pagination {
+			ul {}
+			li {
+				&:first-child {
+					&:before {}
+				}
+				&:before {}
+				&.active {
+					&:before {}
+					.history-pagination-item-inner {
+						&:after,
+						&:before {}
+						span {
+							&:before {}
+						}
+					}
+				}
+			}
+		}
+		.history-pagination-item-inner {
+			&:after,
+			&:before {} 
+			&:after {}
+			&:before {}
+		}
+		.history-pagination-item-text {
+			span {
+				&:first-child {
+					&:before {}
+				}
+				&:before {}
+			}
+		}
+	}
+	@media (max-width: @screen-xx-max) {
+		.history-block-title {
+			h3 {}
+			span {}
+		}
+		.history-block {
+			&:before {}
+		}
+		.history-block__container {
+			&:before {}
+		}
+		.history-slider {}
+		.history-slider__container {
+			padding-right: 0;
+		}
+		.history-slider__item {
+			min-height: 0;
+		}
+		.history-slider__item-title {}
+		.history-slider__item-text {
+			ul {}
+			li {
+				&:before {}
+			}
+		}
+		.history-pagination {
+			padding-bottom: 10px;
+			position: static;
+
+			ul {
+				text-align: center;
+			}
+			li {
+				vertical-align: middle;
+				display: inline-block;
+				margin-top: 0;
+				width: 24%;
+
+				&:first-child {
+					&:before {}
+				}
+				&:before {
+					display: none;
+				}
+				&.active {
+					&:before {}
+					.history-pagination-item-inner {
+						&:after,
+						&:before {}
+						span {
+							&:before {}
+						}
+					}
+				}
+			}
+		}
+		.history-pagination-item-inner {
+			&:after,
+			&:before {} 
+			&:after {}
+			&:before {}
+		}
+		.history-pagination-item-text {
+			span {
+				&:first-child {
+					&:before {}
+				}
+				&:before {}
+			}
+		}
+	}
+
+/*=====  End of history-block  ======*/

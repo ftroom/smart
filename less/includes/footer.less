@@ -1,0 +1,171 @@
+/*==============================
+=            FOOTER            =
+==============================*/
+
+	.footer {
+		background-color: #fff;
+		position: absolute;
+		z-index: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	.footer__container {
+		padding-bottom: 47px;
+		padding-top: 46px;
+		
+		.main-menu__inner {
+			padding-top: 3px;
+
+			ul {
+				text-align: center;
+				padding-top: 1px;
+				padding-right: 0;
+				font-size: 14px;
+			}
+			a {
+				padding-right: 15.5px;
+				padding-left: 15.5px;
+			}
+		}
+	}
+	.footer__copy {
+		padding-top: 3px;
+
+		span {
+			vertical-align: middle;
+			display: inline-block;
+			padding-right: 14px;
+		}
+		.svg-container {
+			margin-bottom: 2px;
+			font-size: 37px;
+		}
+	}
+	.footer__futuroom {
+		text-align: center;
+		padding-left: 4px;
+
+		span {
+			vertical-align: middle;
+			display: inline-block;
+		}
+		.svg-container {
+			&.icon-heart {
+				margin-right: 5px;
+				margin-left: 5px;
+				margin-top: -1px;
+				font-size: 15px;
+				color: #ff4642;
+			}
+			&.icon-futuroom {
+				margin-left: 9px;
+				font-size: 44px;
+				color: #303032;
+			}
+		}
+	}
+	@media (max-width: @screen-md-max) {
+		.footer {}
+		.footer__container {
+			.main-menu__inner {
+				ul {
+					padding-bottom: 15px;
+				}
+				a {
+					padding-right: 45px;
+					padding-left: 45px;
+				}
+			}
+		}
+		.footer__copy {
+			span {}
+			.svg-container {}
+		}
+		.footer__futuroom {
+			text-align: right;
+
+			span {}
+			.svg-container {
+				&.icon-heart {}
+				&.icon-futuroom {}
+			}
+		}
+	}
+	@media (max-width: @screen-sm-max) {
+		.footer {}
+		.footer__container {
+			.main-menu__inner {
+				ul {}
+				a {
+					padding-right: 27px;
+					padding-left: 27px;
+				}
+			}
+		}
+		.footer__copy {
+			span {}
+			.svg-container {}
+		}
+		.footer__futuroom {
+			span {}
+			.svg-container {
+				&.icon-heart {}
+				&.icon-futuroom {}
+			}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		.footer {
+			position: relative;
+			bottom: auto;
+			right: auto;
+			left: auto;
+		}
+		.footer__container {
+			padding-bottom: 5px;
+			padding-top: 10px;
+
+			.main-menu__inner {
+				ul {}
+				a {}
+			}
+		}
+		.footer__copy {
+			text-align: center;
+
+			span {}
+			.svg-container {}
+		}
+		.footer__futuroom {
+			text-align: center;
+
+			span {}
+			.svg-container {
+				&.icon-heart {}
+				&.icon-futuroom {}
+			}
+		}
+	}
+	@media (max-width: @screen-xx-max) {
+		.footer {}
+		.footer__container {
+			.main-menu__inner {
+				ul {}
+				a {}
+			}
+		}
+		.footer__copy {
+			span {}
+			.svg-container {}
+		}
+		.footer__futuroom {
+			span {}
+			.svg-container {
+				&.icon-heart {}
+				&.icon-futuroom {}
+			}
+		}
+	}
+
+/*=====  End of FOOTER  ======*/
