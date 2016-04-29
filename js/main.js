@@ -11,124 +11,60 @@
 		pointGeometry,
 		locations = [
 			{
-				coords: [55.727207, 37.644297],
+				coords: [55.7839129, 37.5873568],
 				item_map_id: '0',
-				title: 'Razo Russia',
-				address: 'Москва, проспект мира 2',
-				phone: '+7 (495) 518-36-99',
-				link: 'razor-russia.ru'
+				title: 'Экомоторс',
+				address: 'Москва, ул. Бутырский Вал, 32',
+				phone: '+7 (495) 984–96–19',
+				link: 'ecomotors.ru'
 			},
 			{
-				coords: [55.773089, 37.632673],
+				coords: [55.6336749, 37.4392713],
 				item_map_id: '1',
-				title: 'Название 1',
-				address: 'Москва, проспект мира 2',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
+				title: 'Electric-Wheels',
+				address: 'Москва, Киевское шоссе, 1',
+				phone: '+7 (495) 135–41–07',
+				link: 'electric-wheels.ru'
 			},
 			{
-				coords: [55.771661, 37.620339],
+				coords: [55.645665, 37.608291],
 				item_map_id: '2',
-				title: 'Название 2',
-				address: 'Москва, цветной бульвар 17',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
+				title: 'Кругозор Груп',
+				address: 'Москва, Черноморский б-р, 10/1',
+				phone: '+7 (499) 610–26–00',
+				link: ''
 			},
 			{
-				coords: [55.768294, 37.605346],
+				coords: [55.85401, 37.5652029],
 				item_map_id: '3',
-				title: 'Название 3',
-				address: 'Москва, малая дмитровка 7',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
+				title: 'Скутермир',
+				address: 'Москва, Дмитровское шоссе, 62',
+				phone: '+7 (495) 988–64–80',
+				link: 'scootermir.ru'
 			},
 			{
-				coords: [55.740862, 37.614258],
+				coords: [55.695385, 37.588885],
 				item_map_id: '4',
-				title: 'Название 4',
-				address: 'Москва, большая якиманка 3',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
+				title: 'GPSum',
+				address: 'Москва, ул. Карьер, 2/1',
+				phone: '+7 (499) 322–03–03',
+				link: 'gpsum.ru'
 			},
 			{
-				coords: [55.726958, 37.648241],
+				coords: [55.7307773, 37.6227253],
 				item_map_id: '5',
-				title: 'Название 5',
-				address: 'Москва, 2-й кожевнический переулок 6',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
+				title: 'Роботбаза',
+				address: 'Москва, ул. Большая Полянка, 63/1',
+				phone: '8 (800) 500–21–69',
+				link: 'robotbaza.ru'
 			},
 			{
-				coords: [55.712147, 37.669666],
+				coords: [55.589843, 38.124509],
 				item_map_id: '6',
-				title: 'Название 6',
-				address: 'Москва, 1-я улица Машиностроения 4к2',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.923206, 37.525324],
-				item_map_id: '7',
-				title: 'Название 7',
-				address: 'Москва, долгопрудный, первомайская ул. 4',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.88979, 37.397701],
-				item_map_id: '8',
-				title: 'Название 8',
-				address: 'Москва, Воротынская 10к1с1',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.881934, 37.423141],
-				item_map_id: '9',
-				title: 'Название 9',
-				address: 'Москва, Бабакина 4',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.702987, 37.676843],
-				item_map_id: '10',
-				title: 'Название 10',
-				address: 'Москва, Трофимова 21к1',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.739174, 37.675056],
-				item_map_id: '11',
-				title: 'Название 11',
-				address: 'Москва, нижегородская 1а',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.731004, 37.741612],
-				item_map_id: '12',
-				title: 'Название 12',
-				address: 'Москва, Рязанский просп. 11',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.759623, 37.788953],
-				item_map_id: '13',
-				title: 'Название 13',
-				address: 'Москва, ул. Металлургов 23а',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
-			},
-			{
-				coords: [55.821765, 37.65426],
-				item_map_id: '14',
-				title: 'Название 14',
-				address: 'Москва, ул. Космонавтов 7',
-				phone: '+7 (495) 518-36-99',
-				link: 'google.com'
+				title: 'ЭдельВейс',
+				address: 'МО, г. Жуковский, ул. Пушкина, 8',
+				phone: '+7 (498) 484–65–41',
+				link: ''
 			}
 		]
 		main_map_center = [55.76, 37.64];
