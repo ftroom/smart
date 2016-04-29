@@ -7991,7 +7991,7 @@ button.close {
 /*======================================
 =            OWL 2 CAROUSEL            =
 ======================================*/
-/* 
+/*
 	 *  Owl Carousel - Animate Plugin
 	 */
 .owl-carousel .animated {
@@ -8026,7 +8026,7 @@ button.close {
     opacity: 0;
   }
 }
-/* 
+/*
 	 *  Owl Carousel - Auto Height Plugin
 	 */
 .owl-height {
@@ -8036,7 +8036,7 @@ button.close {
   -o-transition: height 500ms ease-in-out;
   transition: height 500ms ease-in-out;
 }
-/* 
+/*
 	 *  Core Owl Carousel CSS File
 	 */
 .owl-carousel {
@@ -8129,7 +8129,7 @@ button.close {
 .no-js .owl-carousel {
   display: block;
 }
-/* 
+/*
 	 *  Owl Carousel - Lazy Load Plugin
 	 */
 .owl-carousel .owl-item .owl-lazy {
@@ -8143,7 +8143,7 @@ button.close {
 .owl-carousel .owl-item img {
   transform-style: preserve-3d;
 }
-/* 
+/*
 	 *  Owl Carousel - Video Plugin
 	 */
 .owl-carousel .owl-video-wrapper {
@@ -9152,7 +9152,7 @@ input.form-control.futuroom-style {
   margin-left: 0;
 }
 .header__info-shops {
-  line-height: 19px;
+  line-height: 10px;
 }
 .header__info-shops > span {
   vertical-align: middle;
@@ -9163,7 +9163,7 @@ input.form-control.futuroom-style {
   vertical-align: middle;
   display: inline-block;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   color: #25237b;
 }
 .header__info-shops a.active,
