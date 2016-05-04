@@ -13210,7 +13210,7 @@ input.form-control.futuroom-style {
 }
 .chose-avatar__list {
   text-align: center;
-  padding-top: 66px;
+  padding-top: 50px;
   margin: 0px -55px;
 }
 .chose-avatar__list li {
@@ -13218,8 +13218,12 @@ input.form-control.futuroom-style {
   display: inline-block;
   width: 49%;
 }
+.chose-avatar__list li.avatar-eco img {
+  margin-bottom: -50px;
+}
 .chose-avatar__list li.avatar-pro img {
-  margin-bottom: -68px;
+  margin-bottom: -50px;
+  width: 512px;
 }
 .chose-avatar__list li.avatar-bigfoot img {
   margin-bottom: -50px;
