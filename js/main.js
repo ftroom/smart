@@ -88,6 +88,7 @@ $(document).ready(function() {
 		if($('.selectpicker').length > 0) {
 			$('.selectpicker').selectpicker();
 		}
+		init_production_slider();
 	/*----------  init plugins - end  ----------*/
 
 	/*----------  event listeners - start  ----------*/
