@@ -9,64 +9,117 @@
 		main_map,
 		main_map_collection,
 		pointGeometry,
-		locations = [
-			{
-				coords: [55.7839129, 37.5873568],
-				item_map_id: '0',
-				title: 'Экомоторс',
-				address: 'Москва, ул. Бутырский Вал, 32',
-				phone: '+7 (495) 984–96–19',
-				link: 'ecomotors.ru'
-			},
-			{
-				coords: [55.6336749, 37.4392713],
-				item_map_id: '1',
-				title: 'Electric-Wheels',
-				address: 'Москва, Киевское шоссе, 1',
-				phone: '+7 (495) 135–41–07',
-				link: 'electric-wheels.ru'
-			},
-			{
-				coords: [55.645665, 37.608291],
-				item_map_id: '2',
-				title: 'Кругозор Груп',
-				address: 'Москва, Черноморский б-р, 10/1',
-				phone: '+7 (499) 610–26–00',
-				link: ''
-			},
-			{
-				coords: [55.85401, 37.5652029],
-				item_map_id: '3',
-				title: 'Скутермир',
-				address: 'Москва, Дмитровское шоссе, 62',
-				phone: '+7 (495) 988–64–80',
-				link: 'scootermir.ru'
-			},
-			{
-				coords: [55.695385, 37.588885],
-				item_map_id: '4',
-				title: 'GPSum',
-				address: 'Москва, ул. Карьер, 2/1',
-				phone: '+7 (499) 322–03–03',
-				link: 'gpsum.ru'
-			},
-			{
-				coords: [55.7307773, 37.6227253],
-				item_map_id: '5',
-				title: 'Роботбаза',
-				address: 'Москва, ул. Большая Полянка, 63/1',
-				phone: '8 (800) 500–21–69',
-				link: 'robotbaza.ru'
-			},
-			{
-				coords: [55.589843, 38.124509],
-				item_map_id: '6',
-				title: 'ЭдельВейс',
-				address: 'МО, г. Жуковский, ул. Пушкина, 8',
-				phone: '+7 (498) 484–65–41',
-				link: ''
-			}
-		]
+		all_locations = {
+			msk: [
+				{
+					coords: [55.7839129, 37.5873568],
+					item_map_id: '0',
+					title: 'Экомоторс',
+					address: 'Москва, ул. Бутырский Вал, 32',
+					phone: '+7 (495) 984–96–19',
+					link: 'ecomotors.ru'
+				},
+				{
+					coords: [55.6336749, 37.4392713],
+					item_map_id: '1',
+					title: 'Electric-Wheels',
+					address: 'Москва, Киевское шоссе, 1',
+					phone: '+7 (495) 135–41–07',
+					link: 'electric-wheels.ru'
+				},
+				{
+					coords: [55.645665, 37.608291],
+					item_map_id: '2',
+					title: 'Кругозор Груп',
+					address: 'Москва, Черноморский б-р, 10/1',
+					phone: '+7 (499) 610–26–00',
+					link: ''
+				},
+				{
+					coords: [55.85401, 37.5652029],
+					item_map_id: '3',
+					title: 'Скутермир',
+					address: 'Москва, Дмитровское шоссе, 62',
+					phone: '+7 (495) 988–64–80',
+					link: 'scootermir.ru'
+				},
+				{
+					coords: [55.695385, 37.588885],
+					item_map_id: '4',
+					title: 'GPSum',
+					address: 'Москва, ул. Карьер, 2/1',
+					phone: '+7 (499) 322–03–03',
+					link: 'gpsum.ru'
+				},
+				{
+					coords: [55.7307773, 37.6227253],
+					item_map_id: '5',
+					title: 'Роботбаза',
+					address: 'Москва, ул. Большая Полянка, 63/1',
+					phone: '8 (800) 500–21–69',
+					link: 'robotbaza.ru'
+				},
+				{
+					coords: [55.589843, 38.124509],
+					item_map_id: '6',
+					title: 'ЭдельВейс',
+					address: 'МО, г. Жуковский, ул. Пушкина, 8',
+					phone: '+7 (498) 484–65–41',
+					link: ''
+				}
+			],
+			spb: [
+				{
+					coords: [59.939095, 30.315868],
+					item_map_id: '7',
+					title: 'Санкт-Петербург',
+					address: 'Санкт-Петербург',
+					phone: '+7 (498) 484–65–41',
+					link: ''
+				}
+			],
+			eburg: [
+				{
+					coords: [56.838607, 60.605514],
+					item_map_id: '8',
+					title: 'Екатеринбург',
+					address: 'Екатеринбург',
+					phone: '+7 (498) 484–65–41',
+					link: ''
+				}
+			],
+			nn: [
+				{
+					coords: [56.326887, 44.005986],
+					item_map_id: '9',
+					title: 'Нижний Новгород',
+					address: 'Нижний Новгород',
+					phone: '+7 (498) 484–65–41',
+					link: ''
+				}
+			],
+			irkutsk: [
+				{
+					coords: [52.286387, 104.28066],
+					item_map_id: '10',
+					title: 'Иркутск',
+					address: 'Иркутск',
+					phone: '+7 (495) 984–96–19',
+					link: ''
+				}
+			],
+			other: [
+				{
+					coords: [55.160283, 61.400856],
+					item_map_id: '11',
+					title: 'Челябинск',
+					address: 'Челябинск',
+					phone: '+7 (495) 984–96–19',
+					link: ''
+				}
+			]
+		},
+		locations = all_locations.msk,
 		main_map_center = [55.76, 37.64];
 /*----------  global variables - end  ----------*/
 
@@ -188,12 +241,12 @@ $(document).ready(function() {
 					.addClass('hidden')
 					.eq($this.closest('li').index())
 					.removeClass('hidden');
-					if($('.color-variety').length > 0) {
-          var current_item = $('.color-variety').find('a[data-color-id="' + $this.attr('data-color-id') + '"]')
-          if (!current_item.closest('li').hasClass('active')) {
-          current_item.trigger('click');
-          }
-         }
+				if($('.color-variety').length > 0) {
+					var current_item = $('.color-variety').find('a[data-color-id="' + $this.attr('data-color-id') + '"]')
+					if (!current_item.closest('li').hasClass('active')) {
+						current_item.trigger('click');
+					}
+				}
 			}
 			if($this.closest('.color-variety__item').length > 0) {
 				$this.closest('.product-item')
@@ -201,12 +254,12 @@ $(document).ready(function() {
 					.addClass('hidden')
 					.eq($this.closest('li').index())
 					.removeClass('hidden');
-					if($('.product-presentation.single-mode').length > 0) {
-          var current_item = $('.product-presentation.single-mode .product-item__dots').find('a[data-color-id="' + $this.attr('data-color-id') + '"]')
-          if(!current_item.closest('li').hasClass('active')) {
-          current_item.trigger('click');
-           }
-        }
+				if($('.product-presentation.single-mode').length > 0) {
+					var current_item = $('.product-presentation.single-mode .product-item__dots').find('a[data-color-id="' + $this.attr('data-color-id') + '"]')
+					if(!current_item.closest('li').hasClass('active')) {
+						current_item.trigger('click');
+					}
+				}
 				$('.full-width-block').each(function(){
 					var $th = $(this),
 						match = '',
@@ -215,16 +268,16 @@ $(document).ready(function() {
 						file_type = '';
 
 						// detect browser
-           var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
-           var is_safari = navigator.userAgent.indexOf("Safari") > -1;
-           if ((is_chrome)&&(is_safari)) {is_safari=false;}
+						var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+						var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+						if ((is_chrome)&&(is_safari)) {is_safari=false;}
 
-           if($th.hasClass('will-change-image')) {
-					 if (is_safari) {
-						      url = $th.find('.full-width-block__inner').css('background-image').match(/(\(.+\))/i)[0].replace('(', '').replace(')', '');
-					 } else {
-					   	    url = $th.find('.full-width-block__inner').css('background-image').match(/(\".+\")/i)[0].replace('"', '').replace('"', '');
-					 }
+					if($th.hasClass('will-change-image')) {
+						if (is_safari) {
+							url = $th.find('.full-width-block__inner').css('background-image').match(/(\(.+\))/i)[0].replace('(', '').replace(')', '');
+						} else {
+							url = $th.find('.full-width-block__inner').css('background-image').match(/(\".+\")/i)[0].replace('"', '').replace('"', '');
+						}
 						file_type = url.match(/(\.\w+$)/i)[0];
 						match = url.match(/(__.+$)/i)
 						if(match == null) {
@@ -241,24 +294,24 @@ $(document).ready(function() {
 					}
 				});
 				$('.standart-block').each(function(){
-                var $th = $(this),
-                        match = '',
-                        url = '',
-                        replace_str = '',
-                        file_type = '';
-               if($th.hasClass('will-change-image')) {
-                        img = $th.find('.standart-block__image img')
-                        url = img.attr('src');
-                        file_type = url.match(/(\.\w+$)/i)[0];
-                        match = url.match(/(__.+$)/i);
-                        replace_str = '__' + $this.attr('data-color-id') + file_type;
-                        if(match == null) {
-                                 img.attr('src', url.replace(file_type, replace_str));
-               } else {
-                        img.attr('src', url.replace(match[0], replace_str));
-               }
-           }
-       });
+					var $th = $(this),
+						match = '',
+						url = '',
+						replace_str = '',
+						file_type = '';
+					if($th.hasClass('will-change-image')) {
+						img = $th.find('.standart-block__image img')
+						url = img.attr('src');
+						file_type = url.match(/(\.\w+$)/i)[0];
+						match = url.match(/(__.+$)/i);
+						replace_str = '__' + $this.attr('data-color-id') + file_type;
+						if(match == null) {
+							img.attr('src', url.replace(file_type, replace_str));
+						} else {
+							img.attr('src', url.replace(match[0], replace_str));
+						}
+					}
+				});
 			}
 			e.preventDefault();
 		});
@@ -283,6 +336,24 @@ $(document).ready(function() {
 		});
 
 		$('img').on('dragstart', function(event) { event.preventDefault(); });
+		$('.sticky')
+			.on('sticky_kit:bottom', function(e) {
+				$(this).parent().css('position', 'static');
+			})
+			.on('sticky_kit:unbottom', function(e) {
+				$(this).parent().css('position', 'relative');
+			});
+
+		$('.select-map-city').on('changed.bs.select', debounce( function (e, clickedIndex, newValue, oldValue) {
+			var collection_id = $(this)
+					.closest('.bootstrap-select')
+					.find('.dropdown-menu li')
+					.eq(clickedIndex)
+					.find('[data-collection-id]')
+					.attr('data-collection-id');
+			locations = all_locations[collection_id];
+			update_main_map_placemarks(locations);
+		}, 700));
 
 		// show/hide/toggle blocks
 		$('.button-toggle').on('click', function(e) {
@@ -306,13 +377,6 @@ $(document).ready(function() {
 			hideBlock(button, block);
 			e.preventDefault();
 		});
-		$('.sticky')
-			.on('sticky_kit:bottom', function(e) {
-				$(this).parent().css('position', 'static');
-			})
-			.on('sticky_kit:unbottom', function(e) {
-				$(this).parent().css('position', 'relative');
-			});
 	/*----------  event listeners - end  ----------*/
 
 });
@@ -690,6 +754,65 @@ $(document).ready(function() {
 
 		};
 	};
+	update_main_map_placemarks = function(locations) {
+		clear_geocoder_list();
+		main_map.geoObjects.removeAll();
+		main_map_collection = new ymaps.GeoObjectCollection({}, {
+			iconLayout	: 'default#imageWithContent',
+			iconImageHref: 'img/template/0.png',
+			iconOffset: [0, 18],
+			iconImageSize: [35, 35]
+		});
+		for (var i = locations.length - 1; i >= 0; i--) {
+
+			main_map_collection.add( new ymaps.Placemark( [locations[i].coords[0],locations[i].coords[1]],
+				{
+					iconContent: '<div class="map-marker"><div class="map-marker__inner"></div></div>',
+					hintContent: locations[i].title,
+					item_map_id: locations[i].item_map_id,
+					// balloonContentBody: locations[i].address,
+					coords: locations[i].coords
+				}
+			));
+			update_geocoder_list(build_geocoder_list_item(locations[i]));
+		}
+		main_map.geoObjects.add(main_map_collection);
+		if (locations.length > 1) {
+			main_map.setBounds(main_map_collection.getBounds());
+		} else {
+			main_map.setCenter(locations[0].coords, 15);
+		};
+		main_map.geoObjects.add(main_map_collection);
+		update__perfectScroll();
+
+		jQuery(document).on( "click", "#geocoder-list", function(e) {
+			var terget_item = $(e.target).closest('.geocoder__list-item');
+			terget_item.siblings('li').removeClass('active');
+			main_map_collection.each(function (item) {
+				if ( parseInt( item.properties.get('item_map_id') ) == parseInt(terget_item.attr('data-item-map-id'))){
+					main_map.setCenter(item.properties.get('coords'), 13);
+					item.properties.set('iconContent','<div class="map-marker active"><div class="map-marker__inner"></div></div>')
+					terget_item.addClass('active');
+				} else {
+					item.properties.set('iconContent','<div class="map-marker"><div class="map-marker__inner"></div></div>');
+				}
+			});
+		});
+		main_map_collection.each(function(item){
+			item.events.add('click', function() {
+				main_map_collection.each(function(marker){
+					marker.properties.set('iconContent','<div class="map-marker"><div class="map-marker__inner"></div></div>');
+				});
+				item.properties.set('iconContent','<div class="map-marker active"><div class="map-marker__inner"></div></div>');
+				$('#geocoder-list')
+					.find('.geocoder__list-item')
+					.removeClass('active').end()
+					.find('[data-item-map-id=' + item.properties.get('item_map_id') + ']')
+					.addClass('active');
+				scroll_to($('[data-item-map-id=' + item.properties.get('item_map_id') + ']'),$('.geocoder__list'), 'center');
+			});
+		});
+	};
 	build_geocoder_list_item = function(info){
 		var item = false;
 
@@ -738,9 +861,27 @@ $(document).ready(function() {
 		return item;
 	};
 	update_geocoder_list = function(item) {
-		var geocoder_list = document.getElementById('geocoder-list')
+		var geocoder_list = document.getElementById('geocoder-list'),
+			len = geocoder_list.childNodes.length + 1,
+			$match = "",
+			$objects_text = "ОФИЦИАЛЬНЫХ МАГАЗИНОВ";
 		geocoder_list.appendChild(item);
-		$('.geocoder__list-title .digit').text(geocoder_list.childNodes.length)
+		$match = len.toString().match(/[0-9]$/)[0];
+		if ($match == "1") {
+			$objects_text = 'ОФИЦИАЛЬНЫЙ МАГАЗИН';
+		}
+		if ($match == "2" || $match == "3" || $match == "4") {
+			$objects_text = 'ОФИЦИАЛЬНЫХ МАГАЗИНА';
+		}
+		$match = len.toString().match(/[0-9]{2}$/);
+		if ($match != null) {
+			if ($match[0] == "11" || $match[0] == "12" || $match[0] == "13" || $match[0] == "14") {
+				$objects_text = 'ОФИЦИАЛЬНЫХ МАГАЗИНОВ';
+			}
+		}
+		$('.geocoder__list-title .digit').text(len);
+		$('.geocoder__list-title .city-text').text($('.geocoder__form .dropdown-toggle .filter-option span').attr('data-city-text'));
+		$('.geocoder__list-title .objects-text').text($objects_text);
 		return true;
 	};
 	clear_geocoder_list = function(){

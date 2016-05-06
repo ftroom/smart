@@ -721,7 +721,7 @@
               <div class="product-item__image"><img src="img/content/zooter.jpg" alt=""></div>
             </div>
           </div>
-          <div class="product-item clearfix windrover grey-gradient">
+          <div class="product-item clearfix windrover">
             <div class="product-presentation__container container">
               <div class="product-item__info">
                 <div class="product-item__title">
@@ -965,20 +965,20 @@
               <form>
                 <div class="form-group">
                   <div class="select-container">
-                    <select class="selectpicker">
-                      <option selected>МОСКВА И МО</option>
-                      <option>САНКТ–ПЕТЕРБУРГ</option>
-                      <option>ЕКАТЕРИНБУРГ</option>
-                      <option>НИЖНИЙ НОВГОРОД</option>
-                      <option>ИРКУТСК</option>
-                      <option>ДРУГОЙ ГОРОД</option>
+                    <select class="selectpicker select-map-city">
+                      <option value="msk" data-content="<span data-collection-id='msk' data-city-text='МОСКВE И МО'>МОСКВА И МО</span>" selected></option>
+                      <option value="spb" data-content="<span data-collection-id='spb' data-city-text='САНКТ–ПЕТЕРБУРГE'>САНКТ–ПЕТЕРБУРГ</span>"></option>
+                      <option value="eburg" data-content="<span data-collection-id='eburg' data-city-text='ЕКАТЕРИНБУРГE'>ЕКАТЕРИНБУРГ</span>"></option>
+                      <option value="nn" data-content="<span data-collection-id='nn' data-city-text='НИЖНЕМ НОВГОРОДЕ'>НИЖНИЙ НОВГОРОД</span>"></option>
+                      <option value="irkutsk" data-content="<span data-collection-id='irkutsk' data-city-text='ИРКУТСКЕ'>ИРКУТСК</span>"></option>
+                      <option value="other" data-content="<span data-collection-id='other' data-city-text='ДРУГИХ ГОРОДАХ'>ДРУГОЙ ГОРОД</span>"></option>
                     </select>
                   </div>
                 </div>
               </form>
             </div>
             <div class="geocoder__list custom-scroll">
-              <div class="geocoder__list-title"><span><span class="digit"> </span>ОФИЦИАЛЬНЫХ МАГАЗИНА В МОСКВЕ</span></div>
+              <div class="geocoder__list-title"><span><span class="digit">0</span> <span class="objects-text">ОФИЦИАЛЬНЫХ МАГАЗИНОВ</span> В <span class="city-text">МОСКВE И МО</span></span></div>
               <div class="geocoder__list-wrap">
                 <ul id="geocoder-list" class="reset-list">
                 </ul>
