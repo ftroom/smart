@@ -10519,6 +10519,8 @@ a.active .fast-buy__item {
   left: 0;
 }
 .history-block__inner {
+  background-position: left bottom;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 .history-block__container {
@@ -10529,7 +10531,7 @@ a.active .fast-buy__item {
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
-  display: block;
+  display: none;
   height: 595px;
   width: 567px;
   left: -140px;

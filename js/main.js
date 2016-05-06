@@ -607,10 +607,15 @@ $(document).ready(function() {
 				animateOut: 'zoomOut',
 				animateIn: 'fadeInDown',
 				onTranslated: function(){
+					var active_item = $('#history-slider').find('.owl-item.active');
 					$('.history-pagination-1 li')
 						.removeClass('active')
-						.eq($('#history-slider').find('.owl-item.active').index())
+						.eq(active_item.index())
 						.addClass('active');
+					// console.log(active_item.find('.history-slider__item'));
+					$('.history-block__inner').css({
+						'background-image': 'url(' + active_item.find('.history-slider__item').attr('data-bg-src') + ')'
+					});
 				},
 				nav: false
 			});
