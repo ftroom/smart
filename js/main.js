@@ -95,9 +95,26 @@ $(document).ready(function() {
 		$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
 			if ($(e.target).closest('.header__info-drop-nav-item').length > 0)
 			{
+				var len = $($(e.target).attr('href')).find('.header__info-drop-item').length,
+					$match = "",
+					$text = "официальных магазинов";
+				$match = len.toString().match(/[0-9]$/)[0];
+				if ($match == "1") {
+					$text = 'официальный магазин';
+				}
+				if ($match == "2" || $match == "3" || $match == "4") {
+					$text = 'официальных магазина';
+				}
+				$match = len.toString().match(/[0-9]{2}$/);
+				if ($match != null) {
+					if ($match[0] == "11" || $match[0] == "12" || $match[0] == "13" || $match[0] == "14") {
+						$text = 'официальных магазинов';
+					}
+				}
 				$('.header__info-shops .button-toggle')
 					.find('.city').text(e.target.innerHTML)
-					.end().find('.quantity').text($($(e.target).attr('href')).find('.header__info-drop-item').length);
+					.end().find('.quantity').text(len)
+					.end().find('.text').text($text);
 			}
 		})
 
