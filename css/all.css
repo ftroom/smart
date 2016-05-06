@@ -9094,6 +9094,9 @@ input.form-control.futuroom-style {
   left: 0;
   top: 0;
 }
+.sticky {
+  z-index: 100;
+}
 /******* UI END *******/
 /*=====  End of all imports  ======*/
 /**

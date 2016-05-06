@@ -306,7 +306,13 @@ $(document).ready(function() {
 			hideBlock(button, block);
 			e.preventDefault();
 		});
-
+		$('.sticky')
+			.on('sticky_kit:bottom', function(e) {
+				$(this).parent().css('position', 'static');
+			})
+			.on('sticky_kit:unbottom', function(e) {
+				$(this).parent().css('position', 'relative');
+			});
 	/*----------  event listeners - end  ----------*/
 
 });
@@ -354,6 +360,8 @@ $(document).ready(function() {
 			hideBlock($('.toggle-main-menu-btn'), $('.main-menu__container'));
 			update_history_slider_2_gallery_item_height();
 			destroy__perfectScroll();
+			sticky__init('.sticky','.main');
+			// sticky__destroy('.sticky');
 			breakPoint = 'xx';
 		};
 	};
@@ -364,6 +372,8 @@ $(document).ready(function() {
 			hideBlock($('.toggle-main-menu-btn'), $('.main-menu__container'));
 			update_history_slider_2_gallery_item_height();
 			destroy__perfectScroll();
+			sticky__init('.sticky','.main');
+			// sticky__destroy('.sticky');
 			breakPoint = 'xs';
 		};
 	};
@@ -375,6 +385,7 @@ $(document).ready(function() {
 			update_history_slider_2_gallery_item_height();
 			destroy__perfectScroll();
 			init__perfectScroll();
+			sticky__init('.sticky','.main');
 			breakPoint = 'sm';
 		};
 	};
@@ -386,6 +397,7 @@ $(document).ready(function() {
 			update_history_slider_2_gallery_item_height();
 			destroy__perfectScroll();
 			init__perfectScroll();
+			sticky__init('.sticky','.main');
 			breakPoint = 'md';
 		};
 	};
@@ -397,6 +409,7 @@ $(document).ready(function() {
 			update_history_slider_2_gallery_item_height();
 			destroy__perfectScroll();
 			init__perfectScroll();
+			sticky__init('.sticky','.main');
 			breakPoint = 'lg';
 		};
 	};
@@ -795,6 +808,21 @@ $(document).ready(function() {
 			b *= a;
 		}
 		return b;
+	};
+
+	sticky__init = function (block, parent_block){
+		if ($(block).length > 0) {
+			$(block).stick_in_parent({
+				parent: parent_block,
+				offset_top : 0
+			});
+		}
+	};
+	sticky__destroy = function(block){
+		$(block).trigger("sticky_kit:detach");
+	};
+	sticky__update = function(){
+		$(document.body).trigger("sticky_kit:recalc");
 	};
 
 
