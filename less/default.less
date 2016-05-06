@@ -424,4 +424,20 @@
 		&:focus {}
 		&:active {}
 	}
+	.loading {
+		&:before {
+			background-image: url(../img/template/preloader.gif);
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-color: #fff;
+			position: absolute;
+			display: block;
+			z-index: 1000;
+			content: '';
+			bottom: 0;
+			right: 0;
+			left: 0;
+			top: 0;
+		}
+	}
 /******* UI END *******/

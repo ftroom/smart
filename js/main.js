@@ -478,6 +478,9 @@ $(document).ready(function() {
 					'<svg class="icon icon-arrows_left"><use xlink:href="#icon-arrows_left"></use></svg>',
 					'<svg class="icon icon-arrows_right"><use xlink:href="#icon-arrows_right"></use></svg>'
 				],
+				onInitialize: function(){
+					$('.production-block__slider-container').removeClass('loading');
+				},
 				responsive: {
 					0: {
 						items: 1

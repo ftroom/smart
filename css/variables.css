@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'moon';
+  src: url('../fonts/moonbold.eot');
+  src: url('../fonts/moonbold.eot?#iefix') format('embedded-opentype'), url('../fonts/moonbold.woff') format('woff'), url('../fonts/moonbold.woff2') format('woff2'), url('../fonts/moonbold.ttf') format('truetype'), url('../fonts/moonbold.svg#moon') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'moon';
+  src: url('../fonts/moonlight.eot');
+  src: url('../fonts/moonlight.eot?#iefix') format('embedded-opentype'), url('../fonts/moonlight.woff') format('woff'), url('../fonts/moonlight.woff2') format('woff2'), url('../fonts/moonlight.ttf') format('truetype'), url('../fonts/moonlight.svg#moon') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+.after {
+  visibility: hidden;
+  display: table;
+  content: '';
+  clear: both;
+  height: 0;
+}
+.clearfix-block {
+  display: table;
+  clear: both;
+  float: none !important;
+}
