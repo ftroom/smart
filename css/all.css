@@ -10361,6 +10361,10 @@ input.form-control.futuroom-style {
 .fast-buy__item:hover {
   color: #ff3335;
 }
+label.active .fast-buy__item,
+a.active .fast-buy__item {
+  color: #ff3335;
+}
 .fast-buy__item-title {
   display: block;
 }
