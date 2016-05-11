@@ -7,7 +7,9 @@
 		callbackfile = false,
 		scrollBarWidth = 0,
 		main_map,
+		contacts_map,
 		main_map_collection,
+		contacts_map_collection,
 		pointGeometry,
 		all_locations = {
 			msk: [
@@ -119,8 +121,27 @@
 				}
 			]
 		},
+		contact_locations = [
+			// {
+			// 	coords: [55.747207, 37.614297],
+			// 	item_map_id: '0',
+			// 	title: 'SMART',
+			// 	address: 'ул. Летниковская, 6а, стр. 9',
+			// 	phone: '+7 (495) 518-36-99',
+			// 	link: 'razor-russia.ru'
+			// },
+			{
+				coords: [55.727207, 37.644297],
+				item_map_id: '0',
+				title: 'SMART',
+				address: 'ул. Летниковская, 6а, стр. 9',
+				phone: '+7 (495) 518-36-99',
+				link: 'razor-russia.ru'
+			}
+		],
 		locations = all_locations.msk,
-		main_map_center = [55.76, 37.64];
+		main_map_center = [55.76, 37.64]
+		contacts_map_center = [55.76, 37.64];
 /*----------  global variables - end  ----------*/
 
 
@@ -646,8 +667,8 @@ $(document).ready(function() {
 		}
 	};
 	init_history_slider_2_gallery = function(){
-		if ($('#history-2-gallery').length > 0) {
-			$('#history-2-gallery').owlCarousel({
+		if ($('.history-block-2__gallery-slider').length > 0) {
+			$('.history-block-2__gallery-slider').owlCarousel({
 				items: 1,
 				dots: true,
 				autoHeight: true,
@@ -656,11 +677,9 @@ $(document).ready(function() {
 					'<svg class="icon icon-arrows_left"><use xlink:href="#icon-arrows_left"></use></svg>',
 					'<svg class="icon icon-arrows_right"><use xlink:href="#icon-arrows_right"></use></svg>'
 				],
-				// animateOut: 'zoomOutDown',
-				// animateIn: 'zoomInUp',
 				nav: true
 			});
-			history_slider_2_gallery = $('#history-2-gallery').data('owlCarousel');
+			history_slider_2_gallery = $('.history-block-2__gallery-slider').data('owlCarousel');
 		};
 	};
 	update_history_slider_2_gallery_item_height = function(){
@@ -669,7 +688,15 @@ $(document).ready(function() {
 			'height': 0,
 			'min-height': 0
 		});
-		h = $('.history-block-2').height();
+		item.each(function(){
+			var $th = $(this);
+			if ($th.closest('.history-block-2').length > 0) {
+				h = $th.closest('.history-block-2').outerHeight();
+			}
+			if ($th.closest('.exhibitions-item').length > 0) {
+				h = $th.closest('.exhibitions-item').outerHeight();
+			}			
+		});
 		item.css({
 			'height': h,
 			'min-height': h
@@ -687,7 +714,83 @@ $(document).ready(function() {
 
 	build_maps = function(){
 		init_main_map();
+		init_contacts_map();
 	};
+	init_contacts_map = function(){
+		if ($('#contacts_map').length > 0){
+			contacts_map = new ymaps.Map("contacts_map", {
+				center: contacts_map_center,
+				zoom: 15,
+				controls: ["zoomControl", "fullscreenControl"]
+			});
+
+			contacts_map.behaviors.disable('scrollZoom');
+
+			pointGeometry = new ymaps.geometry.Point([30, 50]);
+
+			contacts_map_collection = new ymaps.GeoObjectCollection({}, {
+				iconLayout	: 'default#imageWithContent',
+				iconImageHref: 'img/template/0.png',
+				iconOffset: [0, 18],
+				iconImageSize: [35, 35]
+			});
+			clear_geocoder_list();
+			for (var i = contact_locations.length - 1; i >= 0; i--) {
+
+				contacts_map_collection.add( new ymaps.Placemark( [contact_locations[i].coords[0],contact_locations[i].coords[1]],
+					{
+						iconContent: '<div class="map-marker"><div class="map-marker__inner"></div></div>',
+						hintContent: contact_locations[i].title,
+						item_map_id: contact_locations[i].item_map_id,
+						// balloonContentBody: contact_locations[i].address,
+						coords: contact_locations[i].coords
+					}
+				));
+				update_geocoder_list(build_geocoder_list_item(contact_locations[i]));
+			}
+			contacts_map.geoObjects.add(contacts_map_collection);
+			if (contact_locations.length > 1) {
+				contacts_map.setBounds(contacts_map_collection.getBounds());
+			} else {
+				contacts_map.setCenter(contact_locations[0]['coords'], 11);
+			}
+			contacts_map.geoObjects.add(contacts_map_collection);
+			update__perfectScroll();
+
+			$(document).on('resize', function(){
+				contacts_map.container.fitToViewport();
+			});
+
+			jQuery(document).on( "click", "#geocoder-list", function(e) {
+				var terget_item = $(e.target).closest('.geocoder__list-item');
+				terget_item.siblings('li').removeClass('active');
+				contacts_map_collection.each(function (item) {
+					if ( parseInt( item.properties.get('item_map_id') ) == parseInt(terget_item.attr('data-item-map-id'))){
+						contacts_map.setCenter(item.properties.get('coords'), 13);
+						item.properties.set('iconContent','<div class="map-marker active"><div class="map-marker__inner"></div></div>')
+						terget_item.addClass('active');
+					} else {
+						item.properties.set('iconContent','<div class="map-marker"><div class="map-marker__inner"></div></div>');
+					}
+				});
+			});
+			contacts_map_collection.each(function(item){
+				item.events.add('click', function() {
+					contacts_map_collection.each(function(marker){
+						marker.properties.set('iconContent','<div class="map-marker"><div class="map-marker__inner"></div></div>');
+					});
+					item.properties.set('iconContent','<div class="map-marker active"><div class="map-marker__inner"></div></div>');
+					$('#geocoder-list')
+						.find('.geocoder__list-item')
+						.removeClass('active').end()
+						.find('[data-item-map-id=' + item.properties.get('item_map_id') + ']')
+						.addClass('active');
+					scroll_to($('[data-item-map-id=' + item.properties.get('item_map_id') + ']'),$('.geocoder__list'), 'center');
+				});
+			});
+
+		};
+	}
 	init_main_map = function(){
 		if ($('#main_map').length > 0){
 			main_map = new ymaps.Map("main_map", {

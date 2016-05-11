@@ -1,0 +1,195 @@
+/*================================
+=            CONTACTS            =
+================================*/
+
+	.contacts {}
+	.contacts__header {
+		background-color: #25237b;
+		padding-bottom: 94px;
+		padding-top: 51px;
+	}
+	.contacts__header-container {}
+	.contacts__header-title {
+		padding-bottom: 55px;
+
+		h2 {
+			line-height: 1em;
+			font-size: 40px;
+			color: #fff;
+		}
+	}
+	.contacts__info_list_item {
+		vertical-align: middle;
+		display: inline-block;
+		margin-right: 140px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			text-decoration: none;
+			font-size: 16px;
+			color: #fff;
+
+			&:hover {
+				text-decoration: none;
+				color: #fff;
+				
+				.contacts__info_list_item-text {
+					text-decoration: underline;
+				}
+			}
+			&:focus {
+				text-decoration: none;
+				color: #fff;
+			}
+			&:active {
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+		> span {
+			font-size: 16px;
+			color: #fff;
+		}
+		img {
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	.contacts__info_list_item-text {
+		vertical-align: middle;
+		display: inline-block;
+		margin-left: 15px;
+
+		span {}
+	}
+	@media (max-width: @screen-md-max) {
+		.contacts {}
+		.contacts__header {
+			padding-bottom: 70px;
+			padding-top: 50px;
+		}
+		.contacts__header-container {}
+		.contacts__header-title {
+			h2 {}
+		}
+		.contacts__info_list_item {
+			margin-right: 100px;
+
+			&:last-child {}
+			a {
+				&:hover {					
+					.contacts__info_list_item-text {}
+				}
+				&:focus {}
+				&:active {}
+			}
+			> span {}
+			img {}
+		}
+		.contacts__info_list_item-text {
+			span {}
+		}
+	}
+	@media (max-width: @screen-sm-max) {
+		.contacts {}
+		.contacts__header {
+			padding-bottom: 50px;
+			padding-top: 30px;
+		}
+		.contacts__header-container {}
+		.contacts__header-title {
+			padding-bottom: 25px;
+
+			h2 {
+				font-size: 30px;
+			}
+		}
+		.contacts__info_list_item {
+			margin-right: 20px;
+
+			&:last-child {}
+			a {
+				&:hover {					
+					.contacts__info_list_item-text {}
+				}
+				&:focus {}
+				&:active {}
+			}
+			> span {}
+			img {}
+		}
+		.contacts__info_list_item-text {
+			margin-left: 10px;
+
+			span {}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		.contacts {
+			ul {
+				margin-right: auto;
+				margin-left: auto;
+				display: block;
+				width: 280px;
+			}
+		}
+		.contacts__header {}
+		.contacts__header-container {}
+		.contacts__header-title {
+			text-align: center;
+
+			h2 {
+				font-size: 24px;
+			}
+		}
+		.contacts__info_list_item {
+			margin-right: 0;
+			display: block;
+
+			padding-bottom: 10px;
+
+			&:last-child {}
+			a {
+				&:hover {					
+					.contacts__info_list_item-text {}
+				}
+				&:focus {}
+				&:active {}
+			}
+			> span {}
+			img {}
+		}
+		.contacts__info_list_item-text {
+			max-width: 230px;
+			font-size: 14px;
+
+			span {}
+		}
+	}
+	@media (max-width: @screen-xx-max) {
+		.contacts {}
+		.contacts__header {}
+		.contacts__header-container {}
+		.contacts__header-title {
+			h2 {}
+		}
+		.contacts__info_list_item {
+			&:last-child {}
+			a {
+				&:hover {					
+					.contacts__info_list_item-text {}
+				}
+				&:focus {}
+				&:active {}
+			}
+			> span {}
+			img {}
+		}
+		.contacts__info_list_item-text {
+			span {}
+		}
+	}
+
+/*=====  End of CONTACTS  ======*/

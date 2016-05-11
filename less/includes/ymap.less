@@ -3,11 +3,22 @@
 =============================*/
 
 	.ymap__container {
+		&.contacts_map-container {
+			.ymap__title {
+				padding-bottom: 55px;
+				padding-top: 30px;
+			}
+			.geocoder__list-title {
+				padding-left: 15px;
+				text-align: left;
+			}
+		}
 		.map {
 			position: relative;
 			z-index: 1;
 		}
 	}
+	.contacts_map,
 	.main_map {
 		height: 700px;
 	}
@@ -353,7 +364,10 @@
 		}
 		.main_map {}
 		.ymap__title {
-			h3 {}
+			h3 {
+				line-height: normal;
+				font-size: 30px;
+			}
 			span {}
 		}
 		.map-marker {
@@ -414,8 +428,13 @@
 			height: 220px;
 		}
 		.ymap__title {
-			h3 {}
-			span {}
+			h3 {
+				font-size: 26px;
+			}
+			span {
+				font-size: 16px;
+				padding-top: 0;
+			}
 		}
 		.map-marker {
 			&:before {}

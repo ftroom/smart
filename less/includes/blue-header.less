@@ -1,0 +1,92 @@
+/*===================================
+=            BLUE-HEADER            =
+===================================*/
+
+	.blue-header {
+		background-color: #25237b;
+		padding-bottom: 51px;
+		padding-top: 51px;
+		color: #fff;
+
+		&.shops-block {}
+	}
+	.blue-header__container {}
+	.blue-header__title {
+		padding-bottom: 10px;
+
+		h2 {
+			line-height: 1em;
+			font-size: 40px;
+		}
+	}
+	.blue-header__text {
+		max-width: 940px;
+
+		p {
+			line-height: 27px;
+			font-size: 16px;
+		}
+	}
+	@media (max-width: @screen-md-max) {
+		.blue-header {
+			&.shops-block {}
+		}
+		.blue-header__container {}
+		.blue-header__title {
+			h2 {}
+		}
+		.blue-header__text {
+			p {}
+		}
+	}
+	@media (max-width: @screen-sm-max) {
+		.blue-header {
+			&.shops-block {}
+		}
+		.blue-header__container {}
+		.blue-header__title {
+			h2 {
+				line-height: normal;
+				font-size: 30px;
+			}
+		}
+		.blue-header__text {
+			p {}
+		}
+	}
+	@media (max-width: @screen-xs-max) {
+		.blue-header {
+			padding-bottom: 30px;
+			padding-top: 20px;
+			
+			&.shops-block {}
+		}
+		.blue-header__container {}
+		.blue-header__title {
+			text-align: center;
+
+			h2 {
+				font-size: 24px;
+			}
+		}
+		.blue-header__text {
+			p {
+				line-height: normal;
+				font-size: 14px;
+			}
+		}
+	}
+	@media (max-width: @screen-xx-max) {
+		.blue-header {
+			&.shops-block {}
+		}
+		.blue-header__container {}
+		.blue-header__title {
+			h2 {}
+		}
+		.blue-header__text {
+			p {}
+		}
+	}
+
+/*=====  End of BLUE-HEADER  ======*/
