@@ -425,7 +425,7 @@ $(document).ready(function() {
 			update_history_slider_2_gallery_item_height();
 			destroy__perfectScroll();
 			sticky__init('.sticky','.main');
-			// sticky__destroy('.sticky');
+			sticky__destroy('.sticky');
 			breakPoint = 'xx';
 		};
 	};
@@ -437,7 +437,7 @@ $(document).ready(function() {
 			update_history_slider_2_gallery_item_height();
 			destroy__perfectScroll();
 			sticky__init('.sticky','.main');
-			// sticky__destroy('.sticky');
+			sticky__destroy('.sticky');
 			breakPoint = 'xs';
 		};
 	};
@@ -970,6 +970,5 @@ $(document).ready(function() {
 	sticky__update = function(){
 		$(document.body).trigger("sticky_kit:recalc");
 	};
-
 
 /*----------  functions - end  ----------*/

@@ -110,6 +110,127 @@
 				}
 			}	
 		}
+		&.type-4 {
+			min-height: 906px;
+			overflow: hidden;
+
+			.container {
+				position: relative;
+			}
+			.standart-block__title {
+				position: relative;
+				padding-right: 570px;
+				padding-top: 373px;
+				padding-left: 6px;
+				z-index: 2;
+			}
+			h4 {
+				padding-bottom: 11px;
+				line-height: 38px;
+				font-size: 28px;
+			}
+			span {
+				line-height: 27px;
+				font-size: 16px;
+				color: #353a42;
+			}
+			.standart-block__buttons {
+				padding-top: 39px;
+
+				a {
+					display: inline-block;
+					line-height: 24px;
+					font-size: 18px;
+
+					&:hover {}
+					&:focus {}
+					&:active {}
+				}
+			}
+			.standart-block__image {
+				margin-right: -130px;
+				position: absolute;
+				width: 100%;
+				left: 545px;
+				z-index: 1;
+				top: 31px;
+
+				img {
+					max-width: 100%;
+					height: 470px;
+				}
+			}	
+		}
+		&.type-5 {
+			.standart-block__title {
+				padding-bottom: 96px;
+				text-align: center;
+				padding-top: 84px;
+			}
+			h4 {
+				padding-bottom: 11px;
+				line-height: 55px;
+				font-size: 40px;
+			}
+			span {
+				margin-right: auto;
+				margin-left: auto;
+				line-height: 24px;
+				max-width: 675px;
+				font-size: 18px;
+				display: block;
+			}
+		}
+		&.type-6 {
+			min-height: 998px;
+			overflow: hidden;
+
+			.container {
+				position: relative;
+			}
+			.standart-block__title {
+				position: relative;
+				padding-right: 570px;
+				padding-left: 13px;
+				padding-top: 260px;
+				z-index: 2;
+			}
+			h4 {
+				padding-bottom: 11px;
+				line-height: 38px;
+				font-size: 28px;
+			}
+			span {
+				line-height: 27px;
+				font-size: 16px;
+				color: #353a42;
+			}
+			.standart-block__buttons {
+				padding-top: 39px;
+
+				a {
+					display: inline-block;
+					line-height: 24px;
+					font-size: 18px;
+
+					&:hover {}
+					&:focus {}
+					&:active {}
+				}
+			}
+			.standart-block__image {
+				margin-right: -130px;
+				position: absolute;
+				width: 100%;
+				left: 284px;
+				z-index: 1;
+				top: 34px;
+
+				img {
+					max-width: 100%;
+				}
+			}	
+		}
 	}
 	@media (max-width: @screen-md-max) {
 		.standart-block {
@@ -160,6 +281,64 @@
 					img {}
 				}	
 			}
+			&.type-4 {
+				min-height: 520px;
+
+				.container {}
+				.standart-block__title {
+					padding-right: 420px;
+					padding-top: 155px;
+					padding-left: 0;
+				}
+				h4 {}
+				span {}
+				.standart-block__buttons {
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					width: auto;
+					left: 570px;
+
+					img {}
+				}	
+			}
+			&.type-5 {
+				.standart-block__title {
+					padding-bottom: 50px;
+					padding-top: 50px;
+				}
+				h4 {}
+				span {}
+			}
+			&.type-6 {
+				min-height: 520px;
+
+				.container {}
+				.standart-block__title {
+					padding-right: 420px;
+					padding-top: 155px;
+					padding-left: 0;
+				}
+				h4 {}
+				span {}
+				.standart-block__buttons {
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					width: auto;
+					left: 570px;
+
+					img {}
+				}	
+			}
 		}
 	}
 	@media (max-width: @screen-sm-max) {
@@ -190,6 +369,74 @@
 				}
 			}
 			&.type-3 {
+				padding-bottom: 20px;
+				min-height: 0;
+
+				.container {}
+				.standart-block__title {
+					padding-top: 30px;
+					padding-right: 0;
+				}
+				h4 {}
+				span {}
+				.standart-block__buttons {
+					padding-bottom: 15px;
+					text-align: center;
+
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					text-align: center;
+					position: static;
+					margin-right: 0;
+
+					img {}
+				}	
+			}
+			&.type-4 {
+				padding-bottom: 20px;
+				min-height: 0;
+
+				.container {}
+				.standart-block__title {
+					padding-top: 30px;
+					padding-right: 0;
+				}
+				h4 {}
+				span {}
+				.standart-block__buttons {
+					padding-bottom: 15px;
+					text-align: center;
+
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					text-align: center;
+					position: static;
+					margin-right: 0;
+
+					img {}
+				}	
+			}
+			&.type-5 {
+				.standart-block__title {}
+				h4 {
+					line-height: normal;
+					font-size: 28px;
+				}
+				span {
+					font-size: 16px;
+				}
+			}
+			&.type-6 {
 				padding-bottom: 20px;
 				min-height: 0;
 
@@ -283,6 +530,62 @@
 					img {}
 				}	
 			}
+			&.type-4 {
+				.container {}
+				.standart-block__title {}
+				h4 {
+					line-height: normal;
+					font-size: 24px;
+				}
+				span {
+					line-height: normal;
+					font-size: 14px;
+				}
+				.standart-block__buttons {
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					img {}
+				}	
+			}
+			&.type-5 {
+				.standart-block__title {
+					padding-top: 30px;
+				}
+				h4 {
+					font-size: 24px;
+				}
+				span {
+					line-height: normal;
+					font-size: 14px;
+				}
+			}
+			&.type-6 {
+				.container {}
+				.standart-block__title {}
+				h4 {
+					line-height: normal;
+					font-size: 24px;
+				}
+				span {
+					line-height: normal;
+					font-size: 14px;
+				}
+				.standart-block__buttons {
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					img {}
+				}	
+			}
 		}
 	}
 	@media (max-width: @screen-xx-max) {
@@ -312,6 +615,43 @@
 				span {}
 			}
 			&.type-3 {
+				.container {}
+				.standart-block__title {}
+				h4 {}
+				span {}
+				.standart-block__buttons {
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					img {}
+				}	
+			}
+			&.type-4 {
+				.container {}
+				.standart-block__title {}
+				h4 {}
+				span {}
+				.standart-block__buttons {
+					a {
+						&:hover {}
+						&:focus {}
+						&:active {}
+					}
+				}
+				.standart-block__image {
+					img {}
+				}	
+			}
+			&.type-5 {
+				.standart-block__title {}
+				h4 {}
+				span {}
+			}
+			&.type-6 {
 				.container {}
 				.standart-block__title {}
 				h4 {}
