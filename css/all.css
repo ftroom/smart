@@ -13781,7 +13781,6 @@ a.active .fast-buy__item {
 }
 .standart-block.type-4 .standart-block__image img {
   max-width: 100%;
-  height: 470px;
 }
 .standart-block.type-5 .standart-block__title {
   padding-bottom: 96px;
@@ -13976,6 +13975,9 @@ a.active .fast-buy__item {
   .standart-block.type-4 .standart-block__image {
     width: auto;
     left: 570px;
+  }
+  .standart-block.type-4 .standart-block__image img {
+    height: 470px;
   }
   .standart-block.type-5 .standart-block__title {
     padding-bottom: 50px;
