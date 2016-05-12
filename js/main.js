@@ -30,20 +30,20 @@
 					link: 'electric-wheels.ru'
 				},
 				{
-					coords: [55.645665, 37.608291],
+					coords: [55.7061455, 37.4043167],
 					item_map_id: '2',
-					title: 'Кругозор Груп',
-					address: 'Москва, Черноморский б-р, 10/1',
-					phone: '+7 (499) 610–26–00',
-					link: ''
+					title: 'Велопрестиж',
+					address: 'Москва, Сколковское ш., 31',
+					phone: '+7 (926) 210–44–41',
+					link: 'veloprestige.ru'
 				},
 				{
 					coords: [55.85401, 37.5652029],
 					item_map_id: '3',
-					title: 'Скутермир',
-					address: 'Москва, Дмитровское шоссе, 62',
-					phone: '+7 (495) 988–64–80',
-					link: 'scootermir.ru'
+					title: 'ADV Active',
+					address: 'Москва, Ленинградский пр-т, 37 к. 6',
+					phone: '+7 (499) 647–90–37',
+					link: 'adv-active.ru'
 				},
 				{
 					coords: [55.695385, 37.588885],
@@ -62,58 +62,109 @@
 					link: 'robotbaza.ru'
 				},
 				{
-					coords: [55.589843, 38.124509],
+					coords: [55.889911, 37.388438],
 					item_map_id: '6',
-					title: 'ЭдельВейс',
-					address: 'МО, г. Жуковский, ул. Пушкина, 8',
-					phone: '+7 (498) 484–65–41',
-					link: ''
+					title: 'Мое хобби',
+					address: 'Москва, ул. Воротынская, 18',
+					phone: '+7 (985) 859–40–00',
+					link: 'moyohobby.ru'
+				},
+				{
+					coords: [55.763267, 37.564998],
+					item_map_id: '7',
+					title: '1905.ру',
+					address: 'Москва, ул. Красная Пресня, 44/3',
+					phone: '+7 (495) 660–19–05',
+					link: '1905.ru'
+				},
+				{
+					coords: [55.670117, 37.552534],
+					item_map_id: '8',
+					title: 'VeloNova',
+					address: 'Москва, ул. Профсоюзная, 56',
+					phone: '+7 (495) 120–09–25',
+					link: 'velonova.ru'
 				}
+
 			],
 			spb: [
 				{
-					coords: [59.939095, 30.315868],
-					item_map_id: '7',
-					title: 'Санкт-Петербург',
-					address: 'Санкт-Петербург',
-					phone: '+7 (498) 484–65–41',
-					link: ''
+					coords: [60.002249, 30.268616],
+					item_map_id: '9',
+					title: 'BitMotors',
+					address: 'Комендантский проспект, д. 3',
+					phone: '+7 (921) 181-35-96',
+					link: 'bitmotors.net'
+				},
+				{
+					coords: [60.031884, 30.291361],
+					item_map_id: '10',
+					title: 'Action drive',
+					address: 'Новоколомяжский проспект, 21, оф. 28',
+					phone: '+7 (812) 438–12–37',
+					link: 'action-drive.ru'
+				},
+				{
+					coords: [59.9024845, 30.3378751],
+					item_map_id: '11',
+					title: 'Mixuz',
+					address: 'Ново-Рыбинская улица, 19/21',
+					phone: '+7 812 244–71–80',
+					link: 'mixuz.ru'
+				},
+				{
+					coords: [59.9088761, 30.322557],
+					item_map_id: '12',
+					title: 'Electrovelobike.ru',
+					address: 'Набережная Обводного Канала, 90А',
+					phone: '+7 (812) 324–22–05',
+					link: 'electrovelobike.ru'
 				}
 			],
 			eburg: [
 				{
-					coords: [56.838607, 60.605514],
-					item_map_id: '8',
-					title: 'Екатеринбург',
-					address: 'Екатеринбург',
-					phone: '+7 (498) 484–65–41',
-					link: ''
+					coords: [56.906923, 60.590647],
+					item_map_id: '14',
+					title: 'Энергия Движения',
+					address: 'ул. Бакинских Комиссаров, 68',
+					phone: '+7 (343) 219–82–67',
+					link: 'energymotion.ru'
 				}
 			],
 			nn: [
 				{
-					coords: [56.326887, 44.005986],
-					item_map_id: '9',
-					title: 'Нижний Новгород',
-					address: 'Нижний Новгород',
-					phone: '+7 (498) 484–65–41',
-					link: ''
+					coords: [56.2912629, 44.066847],
+					item_map_id: '15',
+					title: 'ИНКАР',
+					address: 'ул. Композитора Касьянова 6, п. №4',
+					phone: '+7 (920) 253–73–16',
+					link: 'cherycity.ru'
 				}
 			],
 			irkutsk: [
 				{
-					coords: [52.286387, 104.28066],
-					item_map_id: '10',
-					title: 'Иркутск',
-					address: 'Иркутск',
-					phone: '+7 (495) 984–96–19',
-					link: ''
+					coords: [52.2701734, 104.2551627],
+					item_map_id: '16',
+					title: 'ФОРВАРД-СПОРТ',
+					address: 'ул. Лермонтова, 78, офис 304',
+					phone: '+7 (3952) 66-87-87',
+					link: '668787.ru'
+				}
+			],
+			ufa: [
+				{
+					coords: [54.7962751, 56.0546426],
+					item_map_id: '17',
+					title: 'NEXT WAY ECO',
+					address: 'Ул. Адмирала Макарова, 26/2, оф. 11',
+					phone: '+7 (347) 262-92-01',
+					link: 'nextwayeco.ru'
 				}
 			],
 			other: [
 				{
 					coords: [55.160283, 61.400856],
-					item_map_id: '11',
+					item_map_id: '14',
 					title: 'Челябинск',
 					address: 'Челябинск',
 					phone: '+7 (495) 984–96–19',
@@ -695,7 +746,7 @@ $(document).ready(function() {
 			}
 			if ($th.closest('.exhibitions-item').length > 0) {
 				h = $th.closest('.exhibitions-item').outerHeight();
-			}			
+			}
 		});
 		item.css({
 			'height': h,
