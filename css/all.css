@@ -13544,6 +13544,15 @@ a.active .fast-buy__item {
   font-size: 18px;
   display: block;
 }
+.color-variety__list {
+  text-align: center;
+}
+.color-variety__item {
+  display: inline-block;
+  margin-right: -3px;
+  margin-left: -3px;
+  float: none;
+}
 .color-variety__item.active a:after {
   background-color: #ff3335;
   opacity: 0.8;
